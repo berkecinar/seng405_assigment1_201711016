@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Seng405_Assigment1_ChessClock">
         <activity
+            android:name=".CountDownTimerActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
