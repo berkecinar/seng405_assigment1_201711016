@@ -8,34 +8,93 @@
 
     <TextView
         android:id="@+id/Counter1"
-        android:layout_width="270dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="112dp"
-        android:layout_marginBottom="126dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="106dp"
         android:gravity="center"
         android:rotation="180"
         android:text="20:10"
+        android:textAlignment="center"
         android:textSize="80dp"
         app:layout_constraintBottom_toTopOf="@+id/Counter2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/switchButton2"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/Counter2"
-        android:layout_width="270dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="193dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:gravity="center"
         android:text="20:10"
+        android:textAlignment="center"
         android:textSize="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/switchButton1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Counter1"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/switchButton2"
+        android:layout_width="413dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:rotation="180"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/Counter1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/switchButton1"
+        android:layout_width="413dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Counter1" />
+        app:layout_constraintTop_toBottomOf="@+id/Counter2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="409dp"
+        android:layout_height="106dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="106dp"
+            android:layout_weight="1"
+            android:text="Start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

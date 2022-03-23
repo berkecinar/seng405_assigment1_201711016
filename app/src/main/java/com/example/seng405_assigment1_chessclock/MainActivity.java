@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity
 
     private void openCountDownTimerActivity()
     {
-        Intent intent = new Intent(this, CountDownTimerActivity.class);
+        Intent intent = new Intent(this, ChessClock.class);
         startActivity(intent);
     }
 }
