@@ -52,7 +52,7 @@ public class ChessClock extends AppCompatActivity {
         switchButton1.setEnabled(false);
         switchButton2.setEnabled(false);
 
-        isClockOneRunning = false;
+        isClockOneRunning = true;
         isClockTwoRunning = false;
 
         isPlayerOnePlaying = true;
@@ -82,7 +82,6 @@ public class ChessClock extends AppCompatActivity {
 
         UpdateCountDownText(3);
     }
-
     private void StartTimer()
     {
         if(isPlayerOnePlaying)
@@ -125,7 +124,7 @@ public class ChessClock extends AppCompatActivity {
             switchButton1.setEnabled(false);
             switchButton2.setEnabled(true);
 
-            clockOneCountDownTimer = new CountDownTimer(clockTwoTimeLeftInMillis, 1000) {
+            clockTwoCountDownTimer = new CountDownTimer(clockTwoTimeLeftInMillis, 1000) {
                 @Override
                 public void onTick(long l)
                 {
@@ -149,8 +148,8 @@ public class ChessClock extends AppCompatActivity {
                     switchButton2.setVisibility(View.INVISIBLE);
                 }
             }.start();
-            isClockOneRunning = true;
-            isClockTwoRunning = false;
+            isClockTwoRunning = true;
+            isClockOneRunning = false;
 
             startPauseButton.setText("Pause");
             resetButton.setVisibility(View.INVISIBLE);
